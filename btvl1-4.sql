@@ -1,0 +1,15 @@
+create table lop(
+ma_lop int primary key,
+ten_lop varchar(100) not null
+);
+
+create table sinh_vien(
+ma_sv int primary key,
+ten_sv varchar(100) not null,
+ngay_sinh date not null,
+gioi_tinh varchar(10) not null,
+ma_lop int not null,
+
+foreign key(ma_lop)
+references lop(ma_lop)
+);
